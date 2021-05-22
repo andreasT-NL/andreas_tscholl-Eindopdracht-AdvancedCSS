@@ -1,0 +1,39 @@
+$icon-padding: 0px 30px 0px 20px;
+
+@mixin social-block {
+    display: flex;
+    align-items: center;
+    position: relative;
+    left: 240px;
+    a:hover{
+        @include moving();    
+    }
+}
+@mixin social-hyperlink {
+    color: #fff;
+    width: 300px;
+    height: 60px;
+    padding: 20px 0px;
+    font-size: 1.1rem;
+    @include reverse-move();
+}
+@keyframes move {
+    0% { transform: translateX(0px);}
+    100% { transform: translateX(-240px);}
+    }
+@mixin moving {
+    animation-name: move;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;    
+}
+@keyframes reverse {
+    0% { transform: translateX(-240px);}
+    100% { transform: translateX(0px);}
+}
+@mixin reverse-move {
+    animation-name: reverse;
+    animation-duration: 500ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;    
+}

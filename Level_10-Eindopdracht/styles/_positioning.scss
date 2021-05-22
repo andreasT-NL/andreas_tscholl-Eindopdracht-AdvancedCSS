@@ -1,0 +1,10 @@
+// flexbox
+@mixin flexbox-all-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+//text align
+$text-align-center: center;
+
